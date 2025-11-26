@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portafolio - Diego San Miguel Del Pozo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 1.5rem;
+    }
+
+    .title-block h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    .title-block p { color: var(--muted); }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    main section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .about, .skills, .contact {
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.7));
+      border: 1px solid #1f2937;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+    }
+
+    .about p { color: var(--muted); line-height: 1.6; }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-pill {
+      background: #020617;
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      border: 1px solid #1f2937;
+      color: var(--muted);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      border: 1px solid #1f2937;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 150px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      border-color: var(--accent);
+    }
+
+    .project-card h3 { margin-bottom: 0.35rem; }
+    .project-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+
+    .project-links a {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: var(--accent);
+      margin-right: 0.75rem;
+    }
+
+    .project-links a:hover { text-decoration: underline; }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      color: #4b5563;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a { margin-left: 0; margin-right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="title-block">
+        <h1>Tu Nombre</h1>
+        <p>Desarrollador web · Backend · Full‑stack</p>
+      </div>
+      <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="sobre-mi" class="about">
+        <h2>Sobre mí</h2>
+        <p>
+          Programador web con más de 3 años de experiencia desarrollando proyectos Full Stack. Me considero una persona dinamica, 
+          apasionada por la tecnología y la innovacion. A lo largo de mi carrera, he desempeñado un papel clave en la creación de aplicaciones web
+          robustasy escalables, trabajando con eficiencia tanto en el frontend como en el backend
+        </p>
+        <h2>About me</h2>
+        <p>
+        Web developer with over 3 years of experience developing Full Stack projects. I consider myself a dynamic person, passionate about technology and innovation. 
+        Throughout my career, I have played a key role in the creation of robust and scalable web applications, working efficiently on both the frontend and backend.
+        </p>
+      </section>
+
+      <section class="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-list">
+          <span class="skill-pill">PHP</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">HTML &amp; CSS</span>
+          <span class="skill-pill">Git &amp; GitHub</span>
+        </div>
+      </section>
+
+      <!-- <section id="proyectos">
+        <h2>Proyectos destacados</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div>
+              <h3>Proyecto 1</h3>
+              <p>Descripción breve de lo que hace el proyecto y qué tecnologías usa.</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/tuusuario/proyecto1" target="_blank">Ver en GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3>Proyecto 2</h3>
+              <p>Otra descripción breve para mostrar tus mejores trabajos.</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/tuusuario/proyecto2" target="_blank">Ver en GitHub</a>
+            </div>
+          </article>
+        </div>
+      </section> -->
+
+      <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>Email: <a href="diego.sanmiguel.delpozo1314@gmail">diego.sanmiguel.delpozo1314@gmail</a></p>
+        <p>LinkedIn: <a href="https://es.linkedin.com/in/diego-san-miguel-39b8202b8" target="_blank">linkedin</a></p>
+        <p>GitHub: <a href="https://github.com/Vagatta" target="_blank">github.com/Vagatta</a></p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span>Diego San Miguel Del Pozo· Portafolio
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
